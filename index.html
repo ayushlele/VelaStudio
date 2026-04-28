@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vela Studio — Digital Design & Development</title>
+<title>yourwebsitemakers.com — Premium Web Design</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --black: #080808;
-    --off-black: #111111;
-    --card: #141414;
-    --border: rgba(255,255,255,0.07);
-    --text: #e8e2d9;
-    --muted: #6b6560;
-    --accent: #c8a96e;
-    --accent-dim: rgba(200, 169, 110, 0.12);
-    --white: #f5f0e8;
+    --black: #050507;
+    --off-black: #0c0c10;
+    --card: #0f0f15;
+    --border: rgba(160,120,255,0.08);
+    --text: #e0dce8;
+    --muted: #5a5668;
+    --accent: #a078ff;
+    --accent-dim: rgba(160,120,255,0.10);
+    --white: #f0edf5;
   }
 
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -60,7 +60,7 @@
   }
 
   nav.scrolled {
-    background: rgba(8,8,8,0.92);
+    background: rgba(5,5,7,0.92);
     backdrop-filter: blur(20px);
     border-bottom-color: var(--border);
     padding: 20px 60px;
@@ -76,6 +76,35 @@
   }
 
   .logo span { color: var(--accent); }
+
+  /* LOGO WATERMARK */
+  .hero-watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(200px, 30vw, 500px);
+    font-weight: 300;
+    color: rgba(160,120,255,0.02);
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+    letter-spacing: 0.05em;
+  }
+
+  /* SERVICE CARD MARK */
+  .service-card::after {
+    content: 'ywm.';
+    position: absolute;
+    bottom: 12px;
+    right: 16px;
+    font-family: 'Space Mono', monospace;
+    font-size: 8px;
+    letter-spacing: 0.1em;
+    color: rgba(160,120,255,0.08);
+    pointer-events: none;
+  }
 
   .nav-links {
     display: flex;
@@ -120,7 +149,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 140px 60px 160px;
+    padding: 180px 60px 200px;
     position: relative;
     overflow: hidden;
   }
@@ -133,7 +162,7 @@
     transform: translate(-50%, -50%);
     width: 800px;
     height: 800px;
-    background: radial-gradient(circle, rgba(200,169,110,0.05) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(160,120,255,0.04) 0%, transparent 70%);
     pointer-events: none;
   }
 
@@ -256,11 +285,11 @@
 
   /* STATS */
   .stats {
-    padding: 80px 60px;
+    padding: 100px 60px;
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 0;
   }
 
@@ -327,7 +356,7 @@
 
   /* ABOUT */
   .about {
-    padding: 120px 60px;
+    padding: 160px 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -350,7 +379,7 @@
 
   .about-right {
     display: flex;
-    gap: 2px;
+    gap: 3px;
     width: 100%;
     max-width: 800px;
   }
@@ -365,7 +394,7 @@
 
   .about-card:first-child {
     background: var(--accent-dim);
-    border-color: rgba(200,169,110,0.2);
+    border-color: rgba(160,120,255,0.2);
   }
 
   .about-card-icon {
@@ -389,7 +418,7 @@
 
   /* SERVICES */
   .services {
-    padding: 120px 60px;
+    padding: 160px 60px;
     background: var(--off-black);
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
@@ -410,7 +439,7 @@
   .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
+    gap: 3px;
   }
 
   .service-card {
@@ -437,7 +466,7 @@
   }
 
   .service-card:hover::before { transform: scaleX(1); }
-  .service-card:hover { border-color: rgba(200,169,110,0.15); }
+  .service-card:hover { border-color: rgba(160,120,255,0.15); }
 
   .service-num {
     font-family: 'Space Mono', monospace;
@@ -490,7 +519,7 @@
   .pricing-banner {
     margin-top: 60px;
     background: var(--accent-dim);
-    border: 1px solid rgba(200,169,110,0.25);
+    border: 1px solid rgba(160,120,255,0.25);
     padding: 36px 44px;
     display: flex;
     align-items: center;
@@ -514,7 +543,7 @@
 
   /* PROCESS */
   .process {
-    padding: 120px 60px;
+    padding: 160px 60px;
   }
 
   .process-header { margin-bottom: 80px; text-align: center; }
@@ -532,7 +561,7 @@
     left: calc(12.5% + 24px);
     right: calc(12.5% + 24px);
     height: 1px;
-    background: linear-gradient(to right, var(--accent), rgba(200,169,110,0.2), var(--accent));
+    background: linear-gradient(to right, var(--accent), rgba(160,120,255,0.2), var(--accent));
   }
 
   .process-step {
@@ -573,7 +602,7 @@
 
   /* PORTFOLIO */
   .portfolio {
-    padding: 120px 60px;
+    padding: 160px 60px;
     background: var(--off-black);
     border-top: 1px solid var(--border);
   }
@@ -583,14 +612,14 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 20px;
+    gap: 24px;
     margin-bottom: 60px;
   }
 
   .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2px;
+    gap: 3px;
   }
 
   .portfolio-card {
@@ -902,7 +931,7 @@
 
   /* CTA */
   .cta {
-    padding: 140px 60px;
+    padding: 180px 60px;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -916,7 +945,7 @@
     transform: translate(-50%, -50%);
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(200,169,110,0.06) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(160,120,255,0.05) 0%, transparent 70%);
     pointer-events: none;
   }
 
@@ -1201,7 +1230,7 @@
 
 <!-- NAV -->
 <nav id="nav">
-  <a href="#" class="logo">Vela<span>.</span>Studio</a>
+  <a href="#" class="logo">ywm<span>.</span></a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
@@ -1213,18 +1242,15 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-tag">Boutique Digital Studio</div>
+  <div class="hero-watermark">ywm.</div>
+  <div class="hero-tag">Premium Web Design</div>
   <h1>
-    Websites that<br>
-    <em>work as hard</em><br>
-    as you do.
+    We build<br>
+    <em>websites.</em>
   </h1>
-  <p class="hero-sub">
-    Premium websites. Zero upfront. Built to convert.
-  </p>
   <div class="hero-actions">
-    <a href="#work" class="btn-primary">View Our Work</a>
-    <a href="#services" class="btn-ghost">Explore Services →</a>
+    <a href="https://wa.me/447785435791" class="btn-primary">WhatsApp Us</a>
+    <a href="tel:+919920396730" class="btn-primary" style="background:transparent; border:1px solid var(--accent); color:var(--accent);">Call Now</a>
   </div>
   <div class="hero-scroll-hint">Scroll</div>
 </section>
@@ -1236,12 +1262,8 @@
     <div class="stat-label">Projects Delivered</div>
   </div>
   <div class="stat fade-up">
-    <div class="stat-num">₹<span>0</span></div>
-    <div class="stat-label">Minimum Upfront</div>
-  </div>
-  <div class="stat fade-up">
-    <div class="stat-num">14<span>d</span></div>
-    <div class="stat-label">Avg. Launch Time</div>
+    <div class="stat-num">7<span>d</span></div>
+    <div class="stat-label">Avg. Delivery</div>
   </div>
   <div class="stat fade-up">
     <div class="stat-num">4.9<span>★</span></div>
@@ -1255,15 +1277,10 @@
     <div class="section-tag">Who We Are</div>
     <h2>A small studio<br>with <em>big ambitions</em></h2>
     <div class="about-body">
-      <p>We design and build websites that convert — no templates, no fluff, no large upfront costs.</p>
+      <p>Websites that convert — no templates, no fluff.</p>
     </div>
   </div>
   <div class="about-right fade-up">
-    <div class="about-card">
-      <div class="about-card-icon">⚡</div>
-      <h3>₹0 Upfront</h3>
-      <p>Monthly fee covers everything. Start without the big investment.</p>
-    </div>
     <div class="about-card">
       <div class="about-card-icon">✦</div>
       <h3>Design-First</h3>
@@ -1291,7 +1308,6 @@
     <div class="service-card fade-up">
       <div class="service-num">01</div>
       <h3>Business Websites</h3>
-      <p>Custom sites for service businesses. Clean, fast, professional.</p>
       <ul class="service-features">
         <li>Custom design</li>
         <li>Mobile-first</li>
@@ -1301,7 +1317,6 @@
     <div class="service-card fade-up">
       <div class="service-num">02</div>
       <h3>Landing Pages</h3>
-      <p>High-converting pages for campaigns and launches.</p>
       <ul class="service-features">
         <li>Conversion-focused</li>
         <li>CRM integrations</li>
@@ -1311,7 +1326,6 @@
     <div class="service-card fade-up">
       <div class="service-num">03</div>
       <h3>E-Commerce</h3>
-      <p>Online stores on Shopify or WooCommerce. Built to sell.</p>
       <ul class="service-features">
         <li>Payment integration</li>
         <li>Inventory & shipping</li>
@@ -1321,7 +1335,6 @@
     <div class="service-card fade-up">
       <div class="service-num">04</div>
       <h3>Redesigns</h3>
-      <p>Modernise your site without losing content or SEO.</p>
       <ul class="service-features">
         <li>Visual overhaul</li>
         <li>Performance boost</li>
@@ -1331,7 +1344,6 @@
     <div class="service-card fade-up">
       <div class="service-num">05</div>
       <h3>Maintenance</h3>
-      <p>Keep your site fast, secure, and up to date.</p>
       <ul class="service-features">
         <li>Security & backups</li>
         <li>Content updates</li>
@@ -1341,7 +1353,6 @@
     <div class="service-card fade-up">
       <div class="service-num">06</div>
       <h3>Brand Identity</h3>
-      <p>Logo, colours, typography — a full brand system.</p>
       <ul class="service-features">
         <li>Logo design</li>
         <li>Brand style guide</li>
@@ -1350,13 +1361,6 @@
     </div>
   </div>
 
-  <div class="pricing-banner fade-up">
-    <div class="pricing-banner-text">
-      <h3>Start with ₹0 upfront.</h3>
-      <p>Live in 2–3 weeks. Results within the first month.</p>
-    </div>
-    <a href="https://wa.me/919324359742" class="btn-primary">Contact Me Now</a>
-  </div>
 </section>
 
 <!-- PROCESS -->
@@ -1445,70 +1449,22 @@
 </section>
 
 
-
-
-<!-- WHY US -->
-<section class="why-us">
-  <div class="fade-up">
-    <div class="section-tag">Why Vela</div>
-    <h2>Different by <em>design</em></h2>
-  </div>
-
-  <div class="why-grid">
-    <div class="why-list fade-up">
-      <div class="why-item">
-        <div class="why-num">01</div>
-        <div>
-          <h3>No bloated retainers</h3>
-          <p>Flat, transparent monthly pricing.</p>
-        </div>
-      </div>
-      <div class="why-item">
-        <div class="why-num">02</div>
-        <div>
-          <h3>You own everything</h3>
-          <p>Your code, your domain. Cancel anytime.</p>
-        </div>
-      </div>
-      <div class="why-item">
-        <div class="why-num">03</div>
-        <div>
-          <h3>Custom, every time</h3>
-          <p>No templates. Every project from scratch.</p>
-        </div>
-      </div>
-      <div class="why-item">
-        <div class="why-num">04</div>
-        <div>
-          <h3>Fast. Really fast.</h3>
-          <p>Most sites launch in 10–18 days.</p>
-        </div>
-      </div>
-    </div>
-    <div class="why-right fade-up">
-      <p class="why-quote">"You don't have a website problem. You have a first-impression problem."</p>
-      <p class="why-quote-sub">We make that first impression count.</p>
-      <br>
-      <a href="https://wa.me/919324359742" class="btn-primary" style="display:inline-block; margin-top:8px;">WhatsApp Me →</a>
-    </div>
-  </div>
-</section>
-
 <!-- CTA -->
 <section class="cta" id="contact">
   <div class="section-tag" style="justify-content:center;">Get In Touch</div>
   <h2>Let's <em>talk.</em></h2>
   <div class="cta-actions">
-    <a href="https://wa.me/919324359742" class="btn-primary">WhatsApp Me →</a>
+    <a href="https://wa.me/447785435791" class="btn-primary">WhatsApp Us →</a>
+    <a href="tel:+919920396730" class="btn-primary" style="background:transparent; border:1px solid var(--accent); color:var(--accent);">Call Now →</a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-brand">
-    <a href="#" class="logo">Vela<span>.</span>Studio</a>
-    <p>Boutique digital studio. Premium websites.</p>
-    <a href="https://wa.me/919324359742" class="footer-contact-link">+91 93243 59742</a>
+    <a href="#" class="logo">ywm<span>.</span></a>
+    <p>yourwebsitemakers.com</p>
+    <a href="tel:+919920396730" class="footer-contact-link">+91 99203 96730</a>
   </div>
   <div class="footer-col">
     <h4>Services</h4>
@@ -1534,8 +1490,8 @@
   </div>
 </footer>
 <div class="footer-bottom">
-  <p>© 2025 Vela Studio. All rights reserved.</p>
-  <p>Mumbai, India &nbsp;·&nbsp; +91 93243 59742</p>
+  <p>© 2025 yourwebsitemakers.com</p>
+  <p>Mumbai, India</p>
 </div>
 
 
